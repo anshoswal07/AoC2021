@@ -1,0 +1,31 @@
+def DayOneP1(inp):
+    increased = 0
+    inplist = inp.split()
+    for depthindex in range(len(inplist)):
+        if depthindex > 0:
+            if int(inplist[depthindex]) > int(inplist[depthindex - 1]):
+                increased += 1
+                
+                
+    return increased
+        
+DayOneP1(d1inp)
+
+
+def DayOneP2(inp):
+    increased = 0
+    inplist = inp.split()
+
+    for index in range(len(inplist)-2):
+        
+        
+        currsum = int(inplist[index]) + int(inplist[index + 1]) + int(inplist[index + 2])
+        if index > 0:
+            prevsum = int(inplist[index - 1])+ int(inplist[index]) + int(inplist[index + 1])
+            if currsum > prevsum:
+                increased += 1
+                
+    return increased
+        
+DayOneP2(d1inp)
+
